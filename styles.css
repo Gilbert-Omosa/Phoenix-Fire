@@ -1,0 +1,101 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: lightskyblue;
+    padding: 10px 0;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  /* Main Content Styles */
+  main {
+    padding: 20px 0;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #666;
+  }
+  
+  /* Cards for Sports Styles */
+  .card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .card-text {
+    font-size: 1.1rem;
+  }
+  
+  /* Member Details and Registration Form Styles */
+  .list-group {
+    max-height: 800px;
+    overflow-y: auto;
+  }
+  
+  .list-group-item {
+    cursor: pointer;
+  }
+  
+  .form-label {
+    font-weight: 600;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: lightskyblue;
+    color: #333;
+    padding: 20px 0;
+  }
+  
+  .fa {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar-brand {
+      font-size: 1.2rem;
+    }
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  }
+  
