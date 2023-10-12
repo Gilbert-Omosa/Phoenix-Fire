@@ -75,7 +75,7 @@ Click the register button and the new member will be added to the list. To view 
 
 ### Link to live site
 
-Deployed Front End can be accessed here:
+Deployed Front End can be accessed here: [https://gilbert-omosa.github.io/Phoenix-Fire/](https://gilbert-omosa.github.io/Phoenix-Fire/)
 
 ## Contributing
 
