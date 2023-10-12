@@ -78,3 +78,73 @@ document.addEventListener("DOMContentLoaded", function () {
             deleteMember(member.id);
         });
     }
+
+    // Function to edit a member's details
+    function editMember(member) {
+
+        // Create an edit form for the member
+        const editForm = document.createElement("form");
+        editForm.innerHTML = `
+            <h3>Edit Member Details</h3>
+            <div class="form-group">
+                <label for="editName">Full Name</label>
+                <input type="text" class="form-control" id="editName" value="${member.name}">
+            </div>
+            <div class="form-group">
+                <label for="editEmail">Email</label>
+                <input type="email" class="form-control" id="editEmail" value="${member.email}">
+            </div>
+            <div class="form-group">
+                <label for="editPhone">Phone Number</label>
+                <input type="tel" class="form-control" id="editPhone" value="${member.phone}">
+            </div>
+            <div class="form-group">
+                <label for="editSport">Sport</label>
+                <input type="text" class="form-control" id="editSport" value="${member.sport}">
+            </div>
+            <div class="form-group">
+                <label for="editAge">Age</label>
+                <input type="number" class="form-control" id="editAge" value="${member.age}">
+            </div>
+            <div class="form-group">
+                <label for="editGender">Gender</label>
+                <input type="text" class="form-control" id="editGender" value="${member.gender}">
+            </div>
+            <button type="button" class="btn btn-success m-1" id="saveEdit">Save</button>
+        `;
+
+        // Append the edit form to the member-details container
+        memberDetails.innerHTML = "";
+        memberDetails.appendChild(editForm);
+
+        // Add a click event listener to the "Save" button
+        const saveEditButton = editForm.querySelector("#saveEdit");
+        saveEditButton.addEventListener("click", () => {
+            // Get the updated values from the form
+            member.name = document.getElementById("editName").value;
+            member.email = document.getElementById("editEmail").value;
+            member.phone = document.getElementById("editPhone").value;
+            member.sport = document.getElementById("editSport").value;
+            member.age = document.getElementById("editAge").value;
+            member.gender = document.getElementById("editGender").value;
+
+            // Update the member's data on the server
+            fetch(`http://localhost:3000/members/${member.id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(member),
+            })
+                .then((response) => response.json())
+                .then(() => {
+                    // Redisplay the updated member details
+                    displayMemberDetails(member);
+                    // Update the list to reflect changes
+                    populateList(data);
+                })
+                .catch((error) => {
+                    console.error("Error updating data:", error);
+                });
+        });
+    }
