@@ -174,3 +174,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
         }
     }
+
+    // Event listener for the registration form
+    document.querySelector("form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the form from submitting in the default way
+
+        // Get values from the form
+        const name = document.getElementById("inputName").value;
+        const email = document.getElementById("inputEmail4").value;
+        const phone = document.getElementById("inputPhone").value;
+        const sport = document.getElementById("inputSport").value;
+        const age = document.getElementById("inputAge").value;
+        const gender = document.getElementById("inputGender").value;
+        const image = document.getElementById("inputImage").value;
+
+        // Check if all required fields are filled
+        if (name && email && phone && sport && age && gender && image) {
+            const newMember = {
+                name,
+                email,
+                phone,
+                sport,
+                age,
+                gender,
+                image,
+            };
