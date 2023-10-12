@@ -199,3 +199,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 gender,
                 image,
             };
+
+            // Add the new member to the server
+            fetch("http://localhost:3000/members", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(newMember),
+            })
+            .then((response) => response.json())
+            .then((addedMember) => {
+                // Add the new member to the data array
+                data.push(addedMember);
