@@ -1,8 +1,8 @@
 # Phoenix-Fire
 
-## Phoenix-Fire Sports Club By **Gilbert Omosa** 12/10/2023
+## By Gilbert Omosa  12/10/2023
 
-### Description
+## Description
 
 Welcome to the Phoenix Fire Sports Club web application! This application is designed to help you manage club members, display information about the club's sports, and allow new members to register. This README provides information on how to set up and use the application.
 
