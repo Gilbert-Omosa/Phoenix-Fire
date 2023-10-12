@@ -1,6 +1,6 @@
 # Phoenix-Fire
 
-## Phoenix-Fire Sports Club (Project By **Gilbert Omosa** 12/10/2023)
+## Phoenix-Fire Sports Club By **Gilbert Omosa** 12/10/2023
 
 ### Description
 
