@@ -47,3 +47,34 @@ document.addEventListener("DOMContentLoaded", function () {
             listGroup.appendChild(listItem);
         });
     }
+
+    // Function to display member details
+    function displayMemberDetails(member) {
+
+        // Display member details in the member-details element
+        memberDetails.innerHTML = `
+            <img src="${member.image}" alt="${member.name} Photo" height="500">
+            <h3>${member.name}</h3>
+            <h4>Email: ${member.email}</h4>
+            <h4>Phone: ${member.phone}</h4>
+            <h4>Sport: ${member.sport}</h4>
+            <h4>Age: ${member.age}</h4>
+            <h4>Gender: ${member.gender}</h4>
+
+            <button type="button" class="btn btn-outline-primary btn-lg" id="edit-member">Edit</button>
+            <button type="button" class="btn btn-outline-danger btn-lg" id="delete-member">Delete</button>
+        `;
+
+        // Add a click event listener to the "Edit" button
+        const editButton = document.getElementById("edit-member");
+        editButton.addEventListener("click", () => {
+            editMember(member);
+        });
+
+        // Add a click event listener to the "Delete" button
+        const deleteButton = document.getElementById("delete-member");
+        deleteButton.addEventListener("click", () => {
+            // Call the deleteMember function with the member's ID
+            deleteMember(member.id);
+        });
+    }
