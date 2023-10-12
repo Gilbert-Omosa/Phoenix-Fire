@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function fetchAndPopulateList() {
 
         // Fetch member data from the server
-        fetch("http://localhost:3000/members")
+        fetch("https://phoenix-fire-service.onrender.com/members")
             .then((response) => response.json())
             .then((fetchedData) => {
 
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
             member.gender = document.getElementById("editGender").value;
 
             // Update the member's data on the server
-            fetch(`http://localhost:3000/members/${member.id}`, {
+            fetch(`https://phoenix-fire-service.onrender.com/members/${member.id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (memberIndex !== -1) {
             // Remove the member from the server
-            fetch(`http://localhost:3000/members/${memberId}`, {
+            fetch(`https://phoenix-fire-service.onrender.com/members/${memberId}`, {
                 method: "DELETE",
             })
                 .then(() => {
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
             };
 
             // Add the new member to the server
-            fetch("http://localhost:3000/members", {
+            fetch("https://phoenix-fire-service.onrender.com/members", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
