@@ -148,3 +148,29 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
         });
     }
+
+    // Function to delete a member
+    function deleteMember(memberId) {
+        // Find the member's index in the data array
+        const memberIndex = data.findIndex((member) => member.id === memberId);
+
+        if (memberIndex !== -1) {
+            // Remove the member from the server
+            fetch(`http://localhost:3000/members/${memberId}`, {
+                method: "DELETE",
+            })
+                .then(() => {
+                    // Remove the member from the data array
+                    data.splice(memberIndex, 1);
+
+                    // Clear the member details
+                    memberDetails.innerHTML = "";
+
+                    // Update the list to reflect the deletion
+                    populateList(data);
+                })
+                .catch((error) => {
+                    console.error("Error deleting data:", error);
+                });
+        }
+    }
