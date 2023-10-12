@@ -212,3 +212,16 @@ document.addEventListener("DOMContentLoaded", function () {
             .then((addedMember) => {
                 // Add the new member to the data array
                 data.push(addedMember);
+
+                // Clear the form fields after adding the new member
+                document.getElementById("inputName").value = "";
+                document.getElementById("inputEmail4").value = "";
+                document.getElementById("inputPhone").value = "";
+                document.getElementById("inputSport").value = "";
+                document.getElementById("inputAge").value = "";
+                document.getElementById("inputGender").value = "";
+                document.getElementById("inputImage").value = "";
+
+                // Update the list to reflect the addition
+                populateList(data);
+            })
