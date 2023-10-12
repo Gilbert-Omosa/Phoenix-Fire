@@ -225,3 +225,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Update the list to reflect the addition
                 populateList(data);
             })
+            .catch((error) => {
+                console.error("Error adding a new member:", error);
+            });
+        }
+    })
+
+    // Initial population of the list and displaying the first member's details
+    fetchAndPopulateList();
+});
