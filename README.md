@@ -43,8 +43,9 @@ Before running the application, To get started make sure you have the following 
 
 ## Features
 
-- Browse a list of members.
-- View detailed information about each member.
+- Cards for Sports offered
+- List of members.
+- Detailed information about each member.
 - Edit member details.
 - Delete members from the list.
 - Register new members.
